@@ -1,0 +1,164 @@
+/* Dark theme base */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Login form styles */
+.login-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.login-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ff0077;
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background: #ff0077;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #e6006e;
+}
+
+/* Text styling */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #ff0077;
+}
+
+/* Photo styling */
+.photo-container {
+    margin: 2rem 0;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 0, 119, 0.5);
+}
+
+.our-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.invitation-text {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #ff0077;
+    font-weight: bold;
+}
+
+/* Hearts animation */
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hearts::before,
+.hearts::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff0077;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0077;
+    animation: floatHearts 10s infinite linear;
+}
+
+.hearts::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts::after {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Click effect styling */
+.heart-click {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff0077;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0077;
+    animation: clickEffect 1s ease-out;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes clickEffect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
